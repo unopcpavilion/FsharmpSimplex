@@ -27,6 +27,7 @@ let addConstraints(solver: Solver, x: Variable, y: Variable) =
    constraint3.SetCoefficient(y, 1.0)
 
 let defineObjective(solver: Solver, x: Variable, y: Variable) =
+   // 3x + 4y -> maximize
    let objective = solver.Objective()
    objective.SetCoefficient(x, 3.0)
    objective.SetCoefficient(y, 4.0)
